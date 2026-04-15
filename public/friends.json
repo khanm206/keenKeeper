@@ -83,6 +83,7 @@
     "goal": 14,
     "next_due_date": "2026-03-20"
   },
+
   {
     "id": 8,
     "name": "Olivia Bennett",
@@ -94,5 +95,53 @@
     "bio": "Senior developer who guided me during my early coding journey.",
     "goal": 14,
     "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 9,
+    "name": "James Miller",
+    "picture": "https://randomuser.me/api/portraits/men/52.jpg",
+    "email": "james.miller@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "colleague"],
+    "bio": "Met at a startup internship in London. We still share coding resources and ideas.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 10,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nusrat.jahan@yahoo.com",
+    "days_since_contact": 22,
+    "status": "almost due",
+    "tags": ["school", "best friend"],
+    "bio": "School friend from Dhaka. We used to sit in the same bench for years.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 11,
+    "name": "Ethan Brooks",
+    "picture": "https://randomuser.me/api/portraits/men/18.jpg",
+    "email": "ethan.brooks@outlook.com",
+    "days_since_contact": 39,
+    "status": "overdue",
+    "tags": ["gym", "training partner"],
+    "bio": "Met at the gym. Helped me improve consistency in strength training.",
+    "goal": 14,
+    "next_due_date": "2026-03-28"
+  },
+  {
+    "id": 12,
+    "name": "Fatima Ali",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "fatima.ali@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["family", "cousin"],
+    "bio": "Cousin who lives in Birmingham. We often catch up during weekends.",
+    "goal": 10,
+    "next_due_date": "2026-04-23"
   }
 ]

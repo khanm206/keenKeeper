@@ -1,10 +1,12 @@
 import React from "react";
 import Banner from "./Banner";
+import LoadFriends from "./friendDetails/LoadFriends";
 
 const Home = () => {
   return (
     <>
       <Banner />
+      <LoadFriends />
     </>
   );
 };
