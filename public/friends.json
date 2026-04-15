@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Ayesha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "ayesha.rahman@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["university", "close friend"],
+    "bio": "Met during computer science classes at university. We used to study together before exams.",
+    "goal": 14,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Clarke",
+    "picture": "https://randomuser.me/api/portraits/men/45.jpg",
+    "email": "daniel.clarke@outlook.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["work", "teammate"],
+    "bio": "Worked together on frontend projects during internship in London.",
+    "goal": 14,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 3,
+    "name": "Hasan Mahmud",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "hasan.mahmud@yahoo.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["school", "best friend"],
+    "bio": "Childhood friend from Savar. We still play online games together sometimes.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 4,
+    "name": "Emily Watson",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "email": "emily.watson@gmail.com",
+    "days_since_contact": 21,
+    "status": "overdue",
+    "tags": ["gym", "fitness buddy"],
+    "bio": "Met at the gym. Used to train together regularly before schedules got busy.",
+    "goal": 14,
+    "next_due_date": "2026-03-25"
+  },
+  {
+    "id": 5,
+    "name": "Rafiul Islam",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "rafiul.islam@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["family", "cousin"],
+    "bio": "Cousin living in Dhaka. We usually catch up during family events and festivals.",
+    "goal": 15,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 6,
+    "name": "Sophia Turner",
+    "picture": "https://randomuser.me/api/portraits/women/55.jpg",
+    "email": "sophia.turner@mail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["university", "project partner"],
+    "bio": "Worked together on a group project in university. Great at UI design.",
+    "goal": 10,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 7,
+    "name": "Mohammad Imran",
+    "picture": "https://randomuser.me/api/portraits/men/12.jpg",
+    "email": "m.imran@protonmail.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["mosque", "community"],
+    "bio": "Met through local community events. Haven’t caught up in a while.",
+    "goal": 14,
+    "next_due_date": "2026-03-20"
+  },
+  {
+    "id": 8,
+    "name": "Olivia Bennett",
+    "picture": "https://randomuser.me/api/portraits/women/9.jpg",
+    "email": "olivia.bennett@gmail.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "Senior developer who guided me during my early coding journey.",
+    "goal": 14,
+    "next_due_date": "2026-04-21"
+  }
+]

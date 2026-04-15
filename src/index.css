@@ -1,2 +1,22 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
+
+* {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.bgp {
+  background-color: #244d3f;
+}
+.textp {
+  color: #244d3f;
+}
+
+.active {
+  background-color: #244d3f;
+  color: white;
+}
