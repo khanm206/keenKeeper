@@ -4,6 +4,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../components/homepage/Home";
 import Status from "../components/statusPage/Status";
 import TimeLine from "../components/timelinePage/TimeLine";
+import Error from "../components/errorPage/Error";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
         Component: Status,
       },
     ],
+    errorElement: <Error />,
   },
 ]);
 
