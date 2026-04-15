@@ -1,12 +1,13 @@
 import React from "react";
 import { useContext } from "react";
 import { FriendsContext } from "../../../context/FriendsContext";
+import { Link } from "react-router";
 
 const Card = ({ friend }) => {
   const { id, name, picture, days_since_contact, tags, status } = friend;
   const { formatStatus, statusStyle } = useContext(FriendsContext);
   return (
-    <div className="hover-3d">
+    <Link to={`/details/${id}`} className="hover-3d">
       <div className="card bg-base-100 max-w-96 shadow-sm ">
         <figure className="px-10 pt-10">
           <img src={picture} alt="picture" className="rounded-full" />
@@ -29,7 +30,7 @@ const Card = ({ friend }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

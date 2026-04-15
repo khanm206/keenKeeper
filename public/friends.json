@@ -4,19 +4,19 @@
     "name": "Ayesha Rahman",
     "picture": "https://randomuser.me/api/portraits/women/68.jpg",
     "email": "ayesha.rahman@gmail.com",
-    "days_since_contact": 18,
+    "days_since_contact": 38,
     "status": "overdue",
     "tags": ["university", "close friend"],
     "bio": "Met during computer science classes at university. We used to study together before exams.",
     "goal": 14,
-    "next_due_date": "2026-03-30"
+    "next_due_date": "2026-03-10"
   },
   {
     "id": 2,
     "name": "Daniel Clarke",
     "picture": "https://randomuser.me/api/portraits/men/45.jpg",
     "email": "daniel.clarke@outlook.com",
-    "days_since_contact": 10,
+    "days_since_contact": 26,
     "status": "almost due",
     "tags": ["work", "teammate"],
     "bio": "Worked together on frontend projects during internship in London.",
@@ -28,12 +28,12 @@
     "name": "Hasan Mahmud",
     "picture": "https://randomuser.me/api/portraits/men/32.jpg",
     "email": "hasan.mahmud@yahoo.com",
-    "days_since_contact": 55,
+    "days_since_contact": 15,
     "status": "on-track",
     "tags": ["school", "best friend"],
     "bio": "Childhood friend from Savar. We still play online games together sometimes.",
     "goal": 10,
-    "next_due_date": "2026-04-20"
+    "next_due_date": "2026-05-05"
   },
   {
     "id": 4,
@@ -45,45 +45,44 @@
     "tags": ["gym", "fitness buddy"],
     "bio": "Met at the gym. Used to train together regularly before schedules got busy.",
     "goal": 14,
-    "next_due_date": "2026-03-25"
+    "next_due_date": "2026-03-08"
   },
   {
     "id": 5,
     "name": "Rafiul Islam",
     "picture": "https://randomuser.me/api/portraits/men/76.jpg",
     "email": "rafiul.islam@gmail.com",
-    "days_since_contact": 32,
+    "days_since_contact": 28,
     "status": "almost due",
     "tags": ["family", "cousin"],
     "bio": "Cousin living in Dhaka. We usually catch up during family events and festivals.",
     "goal": 15,
-    "next_due_date": "2026-04-17"
+    "next_due_date": "2026-04-16"
   },
   {
     "id": 6,
     "name": "Sophia Turner",
     "picture": "https://randomuser.me/api/portraits/women/55.jpg",
     "email": "sophia.turner@mail.com",
-    "days_since_contact": 53,
+    "days_since_contact": 17,
     "status": "on-track",
     "tags": ["university", "project partner"],
     "bio": "Worked together on a group project in university. Great at UI design.",
     "goal": 10,
-    "next_due_date": "2026-04-22"
+    "next_due_date": "2026-05-01"
   },
   {
     "id": 7,
     "name": "Mohammad Imran",
     "picture": "https://randomuser.me/api/portraits/men/12.jpg",
     "email": "m.imran@protonmail.com",
-    "days_since_contact": 25,
+    "days_since_contact": 35,
     "status": "overdue",
     "tags": ["mosque", "community"],
     "bio": "Met through local community events. Haven’t caught up in a while.",
     "goal": 14,
-    "next_due_date": "2026-03-20"
+    "next_due_date": "2026-03-05"
   },
-
   {
     "id": 8,
     "name": "Olivia Bennett",
@@ -94,7 +93,7 @@
     "tags": ["work", "mentor"],
     "bio": "Senior developer who guided me during my early coding journey.",
     "goal": 14,
-    "next_due_date": "2026-04-21"
+    "next_due_date": "2026-04-30"
   },
   {
     "id": 9,
@@ -106,7 +105,7 @@
     "tags": ["work", "colleague"],
     "bio": "Met at a startup internship in London. We still share coding resources and ideas.",
     "goal": 14,
-    "next_due_date": "2026-04-25"
+    "next_due_date": "2026-05-10"
   },
   {
     "id": 10,
@@ -118,7 +117,7 @@
     "tags": ["school", "best friend"],
     "bio": "School friend from Dhaka. We used to sit in the same bench for years.",
     "goal": 14,
-    "next_due_date": "2026-04-16"
+    "next_due_date": "2026-04-17"
   },
   {
     "id": 11,
@@ -130,7 +129,7 @@
     "tags": ["gym", "training partner"],
     "bio": "Met at the gym. Helped me improve consistency in strength training.",
     "goal": 14,
-    "next_due_date": "2026-03-28"
+    "next_due_date": "2026-03-12"
   },
   {
     "id": 12,
@@ -142,6 +141,6 @@
     "tags": ["family", "cousin"],
     "bio": "Cousin who lives in Birmingham. We often catch up during weekends.",
     "goal": 10,
-    "next_due_date": "2026-04-23"
+    "next_due_date": "2026-05-12"
   }
 ]

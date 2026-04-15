@@ -5,6 +5,7 @@ import Home from "../components/homepage/Home";
 import Status from "../components/statusPage/Status";
 import TimeLine from "../components/timelinePage/TimeLine";
 import Error from "../components/errorPage/Error";
+import FriendDetails from "../components/friendDetails/FriendDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/stats",
         Component: Status,
+      },
+      {
+        path: "/details/:id",
+        Component: FriendDetails,
       },
     ],
     errorElement: <Error />,
