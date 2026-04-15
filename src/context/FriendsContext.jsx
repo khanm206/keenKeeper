@@ -1,5 +1,7 @@
 import React from "react";
+import { useState } from "react";
 import { createContext } from "react";
+import { toast } from "react-toastify";
 export const FriendsContext = createContext();
 
 const FriendsProvider = ({ children }) => {
@@ -27,9 +29,37 @@ const FriendsProvider = ({ children }) => {
     }
   };
 
+  const [timeline, setTimeline] = useState([]);
+
+  const handleTimeline = (id, friendName, action) => {
+    setTimeline([
+      ...timeline,
+      {
+        id: id,
+        name: friendName,
+        action: action,
+        date: new Date().toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        }),
+      },
+    ]);
+
+    if (action === "call") {
+      toast.success(`You successfully called ${friendName}`);
+    } else if (action === "text") {
+      toast.success(`You successfully texted ${friendName}`);
+    } else if (action === "video") {
+      toast.success(`You successfully video chatted with ${friendName}`);
+    }
+  };
+
   const data = {
     formatStatus,
     statusStyle,
+    handleTimeline,
+    timeline,
   };
   return (
     <FriendsContext.Provider value={data}>{children}</FriendsContext.Provider>

@@ -8,8 +8,8 @@ import logo from "/logo.png";
 const NavBar = () => {
   return (
     <div className="sticky top-0 z-50">
-      <div className="navbar bg-base-100 shadow-sm md:px-[2%]">
-        <div className="flex-1">
+      <div className="navbar bg-base-100 shadow-sm md:px-[2%] justify-between">
+        <div className="w-fit">
           <Link to={"/"}>
             <img src={logo} alt="logo" />
           </Link>

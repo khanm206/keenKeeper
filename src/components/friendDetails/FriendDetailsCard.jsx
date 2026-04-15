@@ -2,16 +2,39 @@ import React from "react";
 import { useContext } from "react";
 import { FriendsContext } from "../../context/FriendsContext";
 import { use } from "react";
+import { BellOff } from "lucide-react";
+import { Archive } from "lucide-react";
+import { Trash } from "lucide-react";
+import call from "../../assets/call.png";
+import text from "../../assets/text.png";
+import video from "../../assets/video.png";
+import { useNavigate } from "react-router";
 
 const FriendDetailsCard = ({ friendsPromise, id }) => {
   const friends = use(friendsPromise).data;
   const selectedFriend = friends.find((friend) => friend.id === Number(id));
-  const { name, picture, days_since_contact, tags, status, bio, goal, email } =
-    selectedFriend;
-  const { formatStatus, statusStyle } = useContext(FriendsContext);
+
+  const {
+    name,
+    picture,
+    days_since_contact,
+    tags,
+    status,
+    bio,
+    goal,
+    email,
+    next_due_date,
+  } = selectedFriend;
+
+  const { formatStatus, statusStyle, handleTimeline } =
+    useContext(FriendsContext);
+
+  const navigate = useNavigate();
   return (
-    <section className="grid grid-cols-3 gap-4">
-      <div className="bg-base-300 h-[80dvh]">
+    <section className="grid grid-cols-3 items-stretch gap-4 h-full">
+      {/* section-1 */}
+      <div className="space-y-4 h-full">
+        {/* card */}
         <div className="hover-3d">
           <div className="bg-base-100 text-center space-y-4 p-10 card">
             <img className="rounded-full mx-auto" src={picture} alt="picture" />
@@ -29,7 +52,7 @@ const FriendDetailsCard = ({ friendsPromise, id }) => {
                 </p>
               ))}
             </div>
-            <p className="bio">"{bio}"</p>
+            <p className="bio text-xl">"{bio}"</p>
             <p>Email: {email}</p>
           </div>
           <div></div>
@@ -41,8 +64,92 @@ const FriendDetailsCard = ({ friendsPromise, id }) => {
           <div></div>
           <div></div>
         </div>
+        {/* 3-buttons */}
+        <button className="bg-base-100 flex items-center justify-center gap-1 text-xl font-semibold p-8 rounded-lg transition hover:scale-102 w-full btn">
+          <BellOff />
+          <p>Snooze 2 weeks</p>
+        </button>
+        <button className="bg-base-100 flex items-center justify-center gap-1 text-xl font-semibold p-8 rounded-lg transition hover:scale-102 w-full btn">
+          <Archive />
+          <p>Archive</p>
+        </button>
+        <button className="bg-base-100 flex items-center justify-center gap-1 text-xl font-semibold p-8 rounded-lg text-[#EF4444] transition hover:scale-102 w-full btn">
+          <Trash />
+          <p>Delete</p>
+        </button>
       </div>
-      <div className="col-span-2 bg-base-300 h-[80dvh]"></div>
+      {/* section-2 */}
+      <div className="col-span-2 bg-base-300 space-y-4 h-full flex flex-col">
+        {/* 3-cards */}
+        <div className="grid grid-cols-3 gap-4 flex-2">
+          <div className="bg-base-100 rounded-lg py-12 text-center flex flex-col justify-center transition hover:scale-102">
+            <p className="text_p text-4xl font-semibold">
+              {days_since_contact}
+            </p>
+            <p>Days Since Contact</p>
+          </div>
+          <div className="bg-base-100 rounded-lg text-center flex flex-col justify-center transition hover:scale-102 py-12">
+            <p className="text_p text-4xl font-semibold">{goal}</p>
+            <p>Goal(Days)</p>
+          </div>
+          <div className="bg-base-100 rounded-lg py-12 text-center flex flex-col justify-center transition hover:scale-102">
+            <p className="text_p text-4xl font-semibold">
+              {new Date(next_due_date).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
+            <p>Next Due</p>
+          </div>
+        </div>
+        {/* relation card */}
+        <div className="bg-white flex justify-between items-center  px-6 py-12 rounded-lg transition hover:scale-102 flex-1">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text_p">Relationship Goal</h2>
+
+            <p>
+              Connect every{" "}
+              <span className="font-semibold text-xl">{goal} days</span>
+            </p>
+          </div>
+          <button className="btn">Edit</button>
+        </div>
+
+        {/*  check in*/}
+        <div className="bg-base-100 rounded-lg p-6 flex-3 flex flex-col justify-center">
+          <h2 className="text_p text-2xl font-semibold">Quick Check-In</h2>
+          <div className="grid grid-cols-3 gap-4 py-4">
+            <button
+              onClick={() => handleTimeline(id, name, "call")}
+              className="btn w-full h-full py-6 flex flex-col hover:scale-102 transition"
+            >
+              <img src={call} />
+              <p>Call</p>
+            </button>
+            <button
+              onClick={() => handleTimeline(id, name, "text")}
+              className="btn flex flex-col w-full h-full py-6 hover:scale-102 transition"
+            >
+              <img src={text} />
+              <p>Text</p>
+            </button>
+            <button
+              onClick={() => handleTimeline(id, name, "video")}
+              className="btn  flex flex-col w-full h-full py-6 hover:scale-102 transition"
+            >
+              <img src={video} />
+              <p>Video Chat</p>
+            </button>
+          </div>
+          <button
+            onClick={() => navigate(-1)}
+            className="btn hover:scale-102 transition"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
     </section>
   );
 };

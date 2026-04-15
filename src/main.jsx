@@ -4,8 +4,8 @@ import "./index.css";
 import { RouterProvider } from "react-router";
 import router from "./routes/Routes.jsx";
 import { ToastContainer } from "react-toastify";
-import { Flip } from "react-toastify";
 import FriendsProvider from "./context/FriendsContext.jsx";
+import { Slide } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
     </FriendsProvider>
 
     <ToastContainer
-      position="bottom-center"
+      position="top-right"
       autoClose={1500}
       hideProgressBar={false}
       newestOnTop={false}
@@ -24,7 +24,7 @@ createRoot(document.getElementById("root")).render(
       draggable
       pauseOnHover
       theme="dark"
-      transition={Flip}
+      transition={Slide}
     />
   </StrictMode>,
 );
