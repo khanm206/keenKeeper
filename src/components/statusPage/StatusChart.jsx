@@ -1,28 +1,36 @@
-import { PieChart, Pie, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, ResponsiveContainer, Cell, Tooltip } from "recharts";
+
 const StatusChart = ({ timeline }) => {
-  let call = timeline.filter((d) => d.action === "call").length;
-  let text = timeline.filter((d) => d.action === "text").length;
-  let video = timeline.filter((d) => d.action === "video").length;
+  const call = timeline.filter((d) => d.action === "call").length;
+  const text = timeline.filter((d) => d.action === "text").length;
+  const video = timeline.filter((d) => d.action === "video").length;
 
   const data = [
-    { name: "Call", value: call, fill: "#244D3F" },
-    { name: "Text", value: text, fill: "#7E35E1" },
-    { name: "Video Chat", value: video, fill: "#37A163" },
+    { name: "Call", value: call, color: "#244D3F" },
+    { name: "Text", value: text, color: "#7E35E1" },
+    { name: "Video", value: video, color: "#37A163" },
   ];
 
   return (
-    <div style={{ width: "100%", height: 300 }}>
+    <div className="w-full h-96">
       <ResponsiveContainer>
         <PieChart>
           <Pie
             data={data}
             dataKey="value"
-            innerRadius="80%"
-            outerRadius="100%"
-            paddingAngle={1}
-            cornerRadius="20%"
+            innerRadius={90}
+            outerRadius={140}
+            paddingAngle={3}
+            cornerRadius={8}
             isAnimationActive={true}
-          />
+            label
+          >
+            {data.map((entry, index) => (
+              <Cell key={index} fill={entry.color} />
+            ))}
+          </Pie>
+
+          <Tooltip />
         </PieChart>
       </ResponsiveContainer>
     </div>
