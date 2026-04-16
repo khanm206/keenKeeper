@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </nav>
 
-      <aside className="w-full flex items-center justify-between text-white/40 border-t border-white/40 pt-5">
+      <aside className="w-full md:flex items-center md:justify-between justify-center text-white/40 border-t border-white/40 pt-5">
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
         <div className="flex gap-2">
           <p>Privacy Policy </p>
