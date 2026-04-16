@@ -31,38 +31,28 @@ const FriendDetailsCard = ({ friendsPromise, id }) => {
 
   const navigate = useNavigate();
   return (
-    <section className="grid grid-cols-3 items-stretch gap-4 h-full">
+    <section className="grid md:grid-cols-3 items-stretch gap-4 h-full">
       {/* section-1 */}
       <div className="space-y-4 h-full">
         {/* card */}
-        <div className="hover-3d">
-          <div className="bg-base-100 text-center space-y-4 p-10 card">
-            <img className="rounded-full mx-auto" src={picture} alt="picture" />
-            <h2 className="text-3xl">{name}</h2>
-            <p className={`${statusStyle(status)} w-fit mx-auto`}>
-              {formatStatus(status)}
-            </p>
-            <div className="flex gap-2 mx-auto justify-center">
-              {tags.map((tag, i) => (
-                <p
-                  key={i}
-                  className="bg-green-600/30 px-3 py-1 rounded-2xl text_p"
-                >
-                  {tag.toUpperCase()}
-                </p>
-              ))}
-            </div>
-            <p className="bio text-xl">"{bio}"</p>
-            <p>Email: {email}</p>
+        <div className="bg-base-100 text-center space-y-4 p-10 card hover:scale-102 transition">
+          <img className="rounded-full mx-auto" src={picture} alt="picture" />
+          <h2 className="text-3xl">{name}</h2>
+          <p className={`${statusStyle(status)} w-fit mx-auto`}>
+            {formatStatus(status)}
+          </p>
+          <div className="flex gap-2 mx-auto justify-center">
+            {tags.map((tag, i) => (
+              <p
+                key={i}
+                className="bg-green-600/30 px-3 py-1 rounded-2xl text_p"
+              >
+                {tag.toUpperCase()}
+              </p>
+            ))}
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <p className="bio text-xl">"{bio}"</p>
+          <p>Email: {email}</p>
         </div>
         {/* 3-buttons */}
         <button className="bg-base-100 flex items-center justify-center gap-1 text-xl font-semibold p-8 rounded-lg transition hover:scale-102 w-full btn">
@@ -79,28 +69,28 @@ const FriendDetailsCard = ({ friendsPromise, id }) => {
         </button>
       </div>
       {/* section-2 */}
-      <div className="col-span-2 bg-base-300 space-y-4 h-full flex flex-col">
+      <div className="md:col-span-2 bg-base-300 space-y-4 h-full flex flex-col">
         {/* 3-cards */}
         <div className="grid grid-cols-3 gap-4 flex-2">
-          <div className="bg-base-100 rounded-lg py-12 text-center flex flex-col justify-center transition hover:scale-102">
-            <p className="text_p text-4xl font-semibold">
+          <div className="bg-base-100 rounded-lg md:py-12 py-4 text-center flex flex-col justify-center transition hover:scale-102">
+            <p className="text_p md:text-4xl text-2xl font-semibold">
               {days_since_contact}
             </p>
-            <p>Days Since Contact</p>
+            <p className="text-sm md:text-base">Days Since Contact</p>
           </div>
-          <div className="bg-base-100 rounded-lg text-center flex flex-col justify-center transition hover:scale-102 py-12">
-            <p className="text_p text-4xl font-semibold">{goal}</p>
-            <p>Goal(Days)</p>
+          <div className="bg-base-100 rounded-lg text-center flex flex-col justify-center transition hover:scale-102 md:py-12 py-4">
+            <p className="text_p md:text-4xl text-2xl font-semibold">{goal}</p>
+            <p className="text-sm md:text-base">Goal(Days)</p>
           </div>
-          <div className="bg-base-100 rounded-lg py-12 text-center flex flex-col justify-center transition hover:scale-102">
-            <p className="text_p text-4xl font-semibold">
+          <div className="bg-base-100 rounded-lg md:py-12 py-4 text-center flex flex-col justify-center transition hover:scale-102">
+            <p className="text_p md:text-4xl text-2xl font-semibold">
               {new Date(next_due_date).toLocaleDateString("en-US", {
                 month: "short",
                 day: "numeric",
                 year: "numeric",
               })}
             </p>
-            <p>Next Due</p>
+            <p className="text-sm md:text-base">Next Due</p>
           </div>
         </div>
         {/* relation card */}
@@ -118,28 +108,30 @@ const FriendDetailsCard = ({ friendsPromise, id }) => {
 
         {/*  check in*/}
         <div className="bg-base-100 rounded-lg p-6 flex-3 flex flex-col justify-center">
-          <h2 className="text_p text-2xl font-semibold">Quick Check-In</h2>
+          <h2 className="text_p md:text-2xl text-xl font-semibold">
+            Quick Check-In
+          </h2>
           <div className="grid grid-cols-3 gap-4 py-4">
             <button
               onClick={() => handleTimeline(id, name, "call")}
-              className="btn w-full h-full py-6 flex flex-col hover:scale-102 transition"
+              className="btn w-full h-full md:py-6 py-2 flex flex-col hover:scale-102 transition"
             >
-              <img src={call} />
+              <img className="md:w-auto w-6" src={call} />
               <p>Call</p>
             </button>
             <button
               onClick={() => handleTimeline(id, name, "text")}
-              className="btn flex flex-col w-full h-full py-6 hover:scale-102 transition"
+              className="btn flex flex-col w-full h-full md:py-6 py-2 hover:scale-102 transition"
             >
-              <img src={text} />
+              <img className="md:w-auto w-6" src={text} />
               <p>Text</p>
             </button>
             <button
               onClick={() => handleTimeline(id, name, "video")}
-              className="btn  flex flex-col w-full h-full py-6 hover:scale-102 transition"
+              className="btn  flex flex-col w-full h-full md:py-6 py-2 hover:scale-102 transition"
             >
-              <img src={video} />
-              <p>Video Chat</p>
+              <img className="md:w-auto w-6" src={video} />
+              <p>Video</p>
             </button>
           </div>
           <button

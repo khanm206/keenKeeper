@@ -23,7 +23,6 @@ const StatusChart = ({ timeline }) => {
             paddingAngle={3}
             cornerRadius={8}
             isAnimationActive={true}
-            label
           >
             {data.map((entry, index) => (
               <Cell key={index} fill={entry.color} />
