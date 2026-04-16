@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
     </FriendsProvider>
 
     <ToastContainer
-      position="top-right"
+      position="top-center"
       autoClose={1500}
       hideProgressBar={false}
       newestOnTop={false}
