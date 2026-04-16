@@ -118,6 +118,7 @@ This project uses **Axios** for:
 - ✏️ Edit relationship goals
 - 🔔 Reminder notifications
 - 🌙 Dark / Light mode toggle
+- 🔧 Delete / Snooze / Archive friend's profile
 
 ---
 
