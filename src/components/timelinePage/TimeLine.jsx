@@ -4,6 +4,7 @@ import { FriendsContext } from "../../context/FriendsContext";
 import TimelineCard from "./TimelineCard";
 import NoHistory from "../noHistory/NoHistory";
 import { useState } from "react";
+import { SearchAlert } from "lucide-react";
 
 const TimeLine = () => {
   const { timeline } = useContext(FriendsContext);
@@ -31,18 +32,28 @@ const TimeLine = () => {
       ) : (
         <div className="space-y-4 mt-10">
           <select
-            defaultValue="All"
+            defaultValue="Filter Timeline"
             className="select appearance-none w-fit"
             onChange={(e) => handleFilter(e.target.value)}
           >
+            <option disabled={true}>Filter Timeline</option>
             <option value="all">All</option>
             <option value="call">Call</option>
             <option value="text">Text</option>
             <option value="video">Video Chat</option>
           </select>
-          {filteredHistory.map((notification, i) => (
-            <TimelineCard key={i} notification={notification} />
-          ))}
+          {timeline.length != 0 && filteredHistory.length === 0 ? (
+            <div className="bg-base-100 p-4 rounded-xl hover:scale-102 transition text-xl flex justify-center items-center gap-2 mt-4">
+              <SearchAlert />
+              No data found!
+            </div>
+          ) : (
+            <div className="space-y-4 mt-4">
+              {filteredHistory.map((notification, i) => (
+                <TimelineCard key={i} notification={notification} />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </section>
