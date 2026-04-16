@@ -75,7 +75,7 @@
 
 - ⚛️ React.js
 - 🎨 Tailwind CSS + DaisyUI
-- 🔀 React Router DOM
+- 🔀 React Router
 - 📊 Recharts
 - 🌐 Axios (for API/data handling)
 - 🔔 React Toastify (for notifications)
